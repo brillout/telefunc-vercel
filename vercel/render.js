@@ -41,6 +41,7 @@ export default async function handler(req, res) {
       url,
       method: req.method,
       body: req.body,
+      debug: true,
     });
     const { body, statusCode, contentType } = httpResponse;
     res.statusCode = statusCode;
