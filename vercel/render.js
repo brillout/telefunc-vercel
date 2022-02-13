@@ -1,9 +1,10 @@
 import { createPageRenderer } from "vite-plugin-ssr";
 import { telefunc, telefuncConfig } from "telefunc";
+import { text } from "micro";
 // `importBuild.js` enables Vercel to bundle our serverless functions, see https://vite-plugin-ssr.com/vercel and https://vite-plugin-ssr.com/importBuild.js
 import "../dist/server/importBuild.js";
 
-telefuncConfig.debug = true
+telefuncConfig.debug = true;
 
 const renderPage = createPageRenderer({ isProduction: true });
 
@@ -14,14 +15,14 @@ export default async function handler(req, res) {
 
   if (url === "/a1") {
     res.statusCode = 200;
-    res.setHeader("content-type", 'text/plain');
-    res.end('a1');
+    res.setHeader("content-type", "text/plain");
+    res.end("a1");
     return;
   }
   if (url === "/_a2") {
     res.statusCode = 200;
-    res.setHeader("content-type", 'text/plain');
-    res.end('_a2');
+    res.setHeader("content-type", "text/plain");
+    res.end("_a2");
     return;
   }
   /*
@@ -39,10 +40,11 @@ export default async function handler(req, res) {
   }
   */
   if (url === "/_telefunc") {
+    const rawBody = await text(req);
     const httpResponse = await telefunc({
       url,
       method: req.method,
-      body: req.body,
+      body: rawBody,
     });
     const { body, statusCode, contentType } = httpResponse;
     res.statusCode = statusCode;
@@ -57,7 +59,7 @@ export default async function handler(req, res) {
 
   if (!httpResponse) {
     res.statusCode = 200;
-    res.end('not found: '+url);
+    res.end("not found: " + url);
   } else {
     const { body, statusCode, contentType } = httpResponse;
 
