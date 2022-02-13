@@ -1,7 +1,9 @@
 import { createPageRenderer } from "vite-plugin-ssr";
-import { telefunc } from "telefunc";
+import { telefunc, telefuncConfig } from "telefunc";
 // `importBuild.js` enables Vercel to bundle our serverless functions, see https://vite-plugin-ssr.com/vercel and https://vite-plugin-ssr.com/importBuild.js
 import "../dist/server/importBuild.js";
+
+telefuncConfig.debug = true
 
 const renderPage = createPageRenderer({ isProduction: true });
 
@@ -41,7 +43,6 @@ export default async function handler(req, res) {
       url,
       method: req.method,
       body: req.body,
-      debug: true,
     });
     const { body, statusCode, contentType } = httpResponse;
     res.statusCode = statusCode;
