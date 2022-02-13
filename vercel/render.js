@@ -38,7 +38,7 @@ export default async function handler(req, res) {
   */
   if (url === "/_telefunc") {
     const httpResponse = await telefunc({
-      url: req.originalUrl,
+      url,
       method: req.method,
       body: req.body,
     });
@@ -64,3 +64,10 @@ export default async function handler(req, res) {
     res.end(body);
   }
 }
+
+
+```js
+app.get("hi", async (req, res, next) => {
+	res.status(200).send('hi');
+});
+```
