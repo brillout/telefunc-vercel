@@ -1,14 +1,16 @@
 <template>
-  <h1>Hello from Vercel - 2</h1>
+  <h1>Hello from Vercel - 3</h1>
   This page is:
   <ul>
     <li>Rendered to HTML.</li>
-    <li>Interactive. <Counter /></li>
+    <li>Interactive: <Counter /></li>
+    <li>Uses Telefunc: <Hello /></li>
   </ul>
 </template>
 
 <script>
 import Counter from './Counter.vue'
-const components = { Counter }
+import Hello from './Hello.vue'
+const components = { Counter, Hello }
 export default { components }
 </script>

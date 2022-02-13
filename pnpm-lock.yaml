@@ -7,6 +7,7 @@ specifiers:
   '@vue/server-renderer': ^3.2.24
   esbuild: ^0.13.12
   express: ^4.17.1
+  telefunc: ^0.1.11
   vite: ^2.7.2
   vite-plugin-ssr: 0.3.53
   vue: ^3.2.24
@@ -18,6 +19,7 @@ dependencies:
   '@vue/server-renderer': 3.2.31_vue@3.2.31
   esbuild: 0.13.15
   express: 4.17.2
+  telefunc: 0.1.11
   vite: 2.8.1
   vite-plugin-ssr: 0.3.53_vite@2.8.1
   vue: 3.2.31
@@ -248,6 +250,10 @@ packages:
   /encodeurl/1.0.2:
     resolution: {integrity: sha1-rT/0yG7C0CkyL1oCw6mmBslbP1k=}
     engines: {node: '>= 0.8'}
+    dev: false
+
+  /es-module-lexer/0.7.1:
+    resolution: {integrity: sha512-MgtWFl5No+4S3TmhDmCz2ObFGm6lEpTnzbQi+Dd+pw4mlTIZTmM2iAs5gRlmx5zS9luzobCSBSI90JM/1/JgOw==}
     dev: false
 
   /es-module-lexer/0.9.3:
@@ -1026,6 +1032,15 @@ packages:
   /supports-preserve-symlinks-flag/1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
+    dev: false
+
+  /telefunc/0.1.11:
+    resolution: {integrity: sha512-PWUevulwvK/+rRthQQ7WeP/asaxh5zbfN3ZVGG8fk/pi3V7WdIp7cBoA+HUewFAD3DPbfovAlwumKwxaWbbVtQ==}
+    dependencies:
+      '@brillout/json-s': 0.4.3
+      '@brillout/libassert': 0.5.4
+      es-module-lexer: 0.7.1
+      vite-plugin-import-build: 0.1.2
     dev: false
 
   /to-regex-range/5.0.1:
