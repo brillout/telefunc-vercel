@@ -64,10 +64,3 @@ export default async function handler(req, res) {
     res.end(body);
   }
 }
-
-
-```js
-app.get("hi", async (req, res, next) => {
-	res.status(200).send('hi');
-});
-```
