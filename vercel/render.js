@@ -55,7 +55,7 @@ export default async function handler(req, res) {
 
   if (!httpResponse) {
     res.statusCode = 200;
-    res.end();
+    res.end('not found: '+url);
   } else {
     const { body, statusCode, contentType } = httpResponse;
 
