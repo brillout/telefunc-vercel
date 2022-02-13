@@ -10,20 +10,20 @@ export default async function handler(req, res) {
 
   console.log("Request to url:", url);
 
-  if (url === "a1") {
+  if (url === "/a1") {
     res.statusCode = 200;
     res.setHeader("content-type", 'text/plain');
     res.end('a1');
     return;
   }
-  if (url === "_a2") {
+  if (url === "/_a2") {
     res.statusCode = 200;
     res.setHeader("content-type", 'text/plain');
     res.end('_a2');
     return;
   }
   /*
-  if (url === "a3") {
+  if (url === "/a3") {
     const httpResponse = await telefunc({
       url: '_telefunc',
       method: 'POST',
@@ -36,7 +36,7 @@ export default async function handler(req, res) {
     return;
   }
   */
-  if (url === "_telefunc") {
+  if (url === "/_telefunc") {
     const httpResponse = await telefunc({
       url: req.originalUrl,
       method: req.method,
