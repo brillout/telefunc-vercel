@@ -2,7 +2,11 @@
   "rewrites": [
     {
       "source": "/((?!assets/)(?!api).*)",
-      "destination": "/api/render.js"
+      "destination": "/api/ssr.js"
+    },
+    {
+      "source": "/_telefunc",
+      "destination": "/api/telefunc.js"
     }
   ]
 }
