@@ -1,5 +1,5 @@
 <template>
-  <h1>Hello from Vercel - 11B</h1>
+  <h1>Hello from Vercel - 12B</h1>
   This page is:
   <ul>
     <li>Rendered to HTML.</li>
