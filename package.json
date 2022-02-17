@@ -3,19 +3,11 @@
     "build": "echo 'I will never be called because the `vercel-build` script supersedes me'",
     "vercel-build": "vite build && vite build --ssr",
     "// For increased dev speed we use an Express.js dev server instead of `vercel dev`": "",
-    "dev": "node ./dev-server"
+    "dev": "node ./devServer"
   },
   "dependencies": {
-    "@vercel/ncc": "0.32.0",
-    "@vitejs/plugin-vue": "^1.10.1",
-    "@vue/compiler-sfc": "^3.2.24",
-    "@vue/server-renderer": "^3.2.24",
-    "esbuild": "^0.13.12",
     "express": "^4.17.1",
-    "micro": "^9.3.4",
-    "telefunc": "^0.1.13",
-    "vite": "^2.7.2",
-    "vite-plugin-ssr": "0.3.53",
-    "vue": "^3.2.24"
+    "telefunc": "^0.1.14",
+    "vite": "^2.7.2"
   }
 }

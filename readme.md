@@ -1,1 +1,1 @@
-Live demo: [telefunc-ssr.vercel.app](https://telefunc-ssr.vercel.app/).
+Live demo: [telefunc.vercel.app](https://telefunc.vercel.app/).
